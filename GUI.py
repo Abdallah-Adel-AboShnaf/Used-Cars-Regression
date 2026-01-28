@@ -67,14 +67,7 @@ def load_and_prep_data():
     """
     try:
         # Load Data
-        #df = pd.read_csv('data/cars.csv')
-        DATA_URL = "https://drive.google.com/uc?id=1sZKbkx6u0_cn1ESKe0GzUdPugA-dCaYg"
-
-        @st.cache_data
-        def load_data():
-            return pd.read_csv(DATA_URL)
-
-        df = load_data()
+        df = pd.read_csv('data/cars.csv')
 
         # --- Data Cleaning ---
         # Drop columns as per notebook analysis
